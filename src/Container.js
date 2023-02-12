@@ -4,7 +4,6 @@ import { Marker } from "react-leaflet/Marker";
 import { Popup } from "react-leaflet/Popup";
 import "leaflet/dist/leaflet.css";
 import useGetApi from "./useGetApi";
-import useGetFlag from "./useGetFlag";
 import { useState, useEffect } from "react";
 import { DateTime } from "luxon";
 
