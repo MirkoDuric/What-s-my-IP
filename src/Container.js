@@ -9,9 +9,8 @@ import { DateTime } from "luxon";
 
 export default function Container() {
   const { DateTime } = require("luxon");
-  const API = `${process.env.REACT_APP_API_KEY}`;
   let { data, lat, lng } = useGetApi(
-    `https://geo.ipify.org/api/v2/country,city?apiKey=${API}`
+    `https://geo.ipify.org/api/v2/country,city?apiKey=${process.env.REACT_APP_API_KEY}`
   );
   const [flag, setFlag] = useState([]);
 

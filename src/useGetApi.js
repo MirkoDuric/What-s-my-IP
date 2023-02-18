@@ -5,10 +5,8 @@ export default function useGetApi(url) {
   const [data, setData] = useState([]);
   const [lat, setLat] = useState(null);
   const [lng, setLng] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    setIsLoading(true);
     axios
       .get(url)
       .then((response) => {
@@ -23,7 +21,6 @@ export default function useGetApi(url) {
       .catch((error) => {
         console.error(error);
       });
-    setIsLoading(false);
   }, []);
-  return { data, lat, lng, isLoading };
+  return { data, lat, lng };
 }
