@@ -1,28 +1,270 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+#root {
+  min-height: 100vh;
+  max-height: 100vh;
+  margin: 0 auto;
+  background-color: gold;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
 .container {
   display: flex;
+  flex-direction: row;
+  gap: 5px;
   text-align: center;
-  margin: 50px auto;
-  height: 70vh;
+  margin: 0 auto;
   width: 80%;
+  padding: 20px;
+  background-color: black;
 }
 .mapContainer {
   margin: 0 auto;
   width: 100%;
-  height: 100%;
+  border: 2px solid gold;
 }
 .dataContainer {
-  height: 100%;
-  width: 45%;
+  width: 80%;
   background-color: antiquewhite;
+  border: 2px solid gold;
 }
 .flag {
   width: 100%;
 }
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.map {
+  height: 70vh;
+}
+
+@media (min-width: 360px) and (min-height: 600px) {
+  .container {
+    flex-direction: column;
+    width: 80%;
   }
-  to {
-    transform: rotate(360deg);
+  .map {
+    height: 40vh;
+  }
+
+  .dataContainer {
+    width: 100%;
+    height: fit-content;
+  }
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    padding: 15% 5% 15%;
+  }
+}
+@media (min-width: 360px) and (min-height: 700px) {
+  .container {
+    flex-direction: column;
+    width: 90%;
+  }
+  .map {
+    height: 45vh;
+  }
+
+  .dataContainer {
+    width: 100%;
+    height: fit-content;
+  }
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    padding: 15% 0% 15%;
+  }
+}
+
+@media (min-width: 240px) and (min-height: 650px) {
+  .container {
+    flex-direction: column;
+    width: 85%;
+    padding: 12px;
+  }
+  .map {
+    height: 45vh;
+  }
+  .dataContainer {
+    width: 100%;
+  }
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    padding: 5% 0%;
+    font-size: 15px;
+  }
+}
+@media (min-width: 400px) and (min-height: 900px) {
+  .container {
+    flex-direction: column;
+    width: 90%;
+    padding: 15px;
+  }
+  .map {
+    height: 50vh;
+  }
+  .dataContainer {
+    width: 100%;
+  }
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 20px;
+  }
+}
+@media (min-width: 1000px) and (min-height: 600px) {
+  .container {
+    flex-direction: row;
+    width: 90%;
+    padding: 15px;
+  }
+  .map {
+    height: 100%;
+  }
+  .dataContainer {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 100%;
+  }
+  .text-container {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    font-size: 20px;
+    margin: 5px auto;
+  }
+}
+
+@media (min-width: 450px) and (min-height: 690px) {
+  .container {
+    flex-direction: column;
+    width: 80%;
+  }
+  .map {
+    height: 45vh;
+  }
+
+  .dataContainer {
+    width: 100%;
+    height: fit-content;
+  }
+  .text-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (min-width: 500px) and (min-height: 690px) {
+  .container {
+    flex-direction: column;
+    width: 70%;
+  }
+  .map {
+    height: 48vh;
+  }
+
+  .dataContainer {
+    width: 100%;
+    height: fit-content;
+  }
+  .text-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (min-width: 530px) and (min-height: 690px) {
+  .container {
+    flex-direction: column;
+    width: 75%;
+  }
+  .map {
+    height: 35vh;
+  }
+
+  .dataContainer {
+    width: 100%;
+    height: fit-content;
+  }
+  .text-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (min-width: 680px) and (min-height: 690px) {
+  .container {
+    flex-direction: row;
+    width: 90%;
+  }
+  .map {
+    height: 100%;
+  }
+
+  .dataContainer {
+    width: 80%;
+    height: 100%;
+  }
+  .text-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 910px) and (min-height: 1360px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .map {
+    height: 40vh;
+  }
+  .dataContainer {
+    width: 100%;
+  }
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 29px;
+  }
+}
+
+@media (min-width: 750px) and (min-height: 1000px) {
+  .container {
+    flex-direction: column;
+    width: 75%;
+  }
+  .map {
+    height: 43vh;
+  }
+  .dataContainer {
+    width: 100%;
+  }
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 29px;
+  }
+}
+@media (min-width: 1200px) and (min-height: 799px) {
+  .container {
+    flex-direction: row;
+    width: 90%;
+  }
+  .map {
+    height: 100%;
+  }
+
+  .dataContainer {
+    width: 100%;
+    height: 100%;
+  }
+  .text-container {
+    display: flex;
+    flex-direction: column;
   }
 }

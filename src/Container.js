@@ -30,11 +30,7 @@ export default function Container() {
       {Object.keys(data).length ? (
         <>
           <div className="mapContainer">
-            <MapContainer
-              center={[lat, lng]}
-              zoom={13}
-              style={{ height: "70vh", width: "100%" }}
-            >
+            <MapContainer className="map" center={[lat, lng]} zoom={13}>
               <TileLayer
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -46,12 +42,17 @@ export default function Container() {
             {flag.length ? (
               <img className="flag" src={flag[0].flags.svg}></img>
             ) : null}
-            <h4>Your IP address is: {data.ip}</h4>
-            <p>
-              You are located in: {data.location.city}, {data.location.country}
-            </p>
-            <p>Today's date: {DateTime.local().toFormat("HH:mm dd/MM/yyyy")}</p>
-            <p>Internet provider: {data.isp} </p>
+            <div className="text-container">
+              <h4>Your IP address is: {data.ip}</h4>
+              <p>
+                You are located in: {data.location.city},{" "}
+                {data.location.country}
+              </p>
+              <p>
+                Today's date: {DateTime.local().toFormat("HH:mm dd/MM/yyyy")}
+              </p>
+              <p>Internet provider: {data.isp} </p>
+            </div>
           </div>
         </>
       ) : (
