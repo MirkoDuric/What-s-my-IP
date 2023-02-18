@@ -250,7 +250,7 @@
     font-size: 29px;
   }
 }
-@media (min-width: 1200px) and (min-height: 799px) {
+@media (min-width: 1200px) and (min-height: 780px) {
   .container {
     flex-direction: row;
     width: 90%;
